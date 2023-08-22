@@ -1,0 +1,33 @@
+repeat wait() until game:IsLoaded()
+queue_on_teleport([[loadstring(game:HttpGet("https://raw.githubusercontent.com/lol-312/printhewwoworld1/main/123",true))()]])
+game.CoreGui.RobloxPromptGui.promptOverlay.ChildAdded:Connect(function(child)
+   if child.Name == "ErrorPrompt" then
+  game:GetService("TeleportService"):Teleport(game.PlaceId, game.Players.LocalPlayer)
+   while true do wait(5)
+game:GetService("TeleportService"):Teleport(game.PlaceId, game.Players.LocalPlayer)
+       end
+   end
+end)
+game:GetService("RunService").Heartbeat:Connect(function()
+firetouchinterest(game.Players.LocalPlayer.Character.HumanoidRootPart, workspace.Teleporters:GetChildren()[9].Touch, 0)
+wait()
+firetouchinterest(game.Players.LocalPlayer.Character.HumanoidRootPart, workspace.Teleporters:GetChildren()[9].Touch, 1)
+end) game:GetService("RunService").Heartbeat:Connect(function(re)
+game:GetService("ReplicatedStorage").Resource.Remote.SkipVote:FireServer()
+local ohString1 = "Vote"
+local ohTable2 = {
+	["Number"] = 2
+}
+
+game:GetService("ReplicatedStorage").Resource.Remote.MapVote:FireServer(ohString1, ohTable2)
+local ohString1 = "Vote"
+local ohTable2 = {
+	["Number"] = 3
+}
+
+game:GetService("ReplicatedStorage").Resource.Remote.GameModeVote:FireServer(ohString1, ohTable2)
+end)
+wait(2)
+for i,v in pairs(getconnections(game:GetService("Players").LocalPlayer.Idled)) do
+   v:Disable()
+end
