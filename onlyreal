@@ -1,5 +1,5 @@
 repeat wait() until game:IsLoaded()
-queue_on_teleport([[loadstring(game:HttpGet("https://raw.githubusercontent.com/lol-312/printhewwoworld1/main/123",true))()]])
+queue_on_teleport([[loadstring(game:HttpGet("https://raw.githubusercontent.com/notaskidguylikeothers/antiskiddotcom/main/onlyreal",true))()]])
 game.CoreGui.RobloxPromptGui.promptOverlay.ChildAdded:Connect(function(child)
    if child.Name == "ErrorPrompt" then
   game:GetService("TeleportService"):Teleport(game.PlaceId, game.Players.LocalPlayer)
